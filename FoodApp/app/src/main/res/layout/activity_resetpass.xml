@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".resetpass">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/main_background"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/login_btn_back"
+        android:onClick="btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.04"
+        app:layout_constraintHorizontal_bias="0.04"/>
+
+    <TextView
+        android:id="@+id/resetpass_tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resset Password"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18pt"
+        app:layout_constraintStart_toStartOf="@id/login_btn_back"
+        app:layout_constraintTop_toTopOf="@id/login_btn_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"/>
+
+    <TextView
+        android:id="@+id/resetpass_tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter your email address to request\na password reset"
+
+        app:layout_constraintStart_toStartOf="@+id/resetpass_tv_1"
+        app:layout_constraintTop_toBottomOf="@+id/resetpass_tv_1"/>
+
+    <EditText
+        android:id="@+id/resetpass_et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="etomoyapochta@mail.ru"
+        android:padding="10dp"
+        android:background="@drawable/custom_edittext1"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintTop_toBottomOf="@id/resetpass_tv_2"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/resetpass_btn_sendpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange"
+        android:text="Send new password"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintTop_toBottomOf="@id/resetpass_et_email"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

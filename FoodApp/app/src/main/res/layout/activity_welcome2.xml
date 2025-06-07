@@ -56,6 +56,7 @@
 
     <Button
         android:id="@+id/welcome2_btn_signup"
+        android:onClick="welcome2_btn_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
@@ -71,20 +72,20 @@
         app:layout_constraintTop_toBottomOf="@id/welcome2_btn_signup"
         app:layout_constraintStart_toStartOf="@id/welcome2_btn_signup"
         app:layout_constraintEnd_toEndOf="@id/welcome2_btn_signup"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Already have an account? "
-            android:textColor="@color/white"
-            android:layout_weight="1"/>
+            android:textColor="@color/white"/>
         <TextView
-            android:layout_width="match_parent"
+            android:onClick="welcome2_btn_login"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
             android:text="Login"
-            android:textColor="@color/white"
-            android:layout_weight="1"/>
+            android:textColor="@color/orange"/>
     </LinearLayout>
 
 
