@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.profilePage">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/main_background"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+<!--    profile-image-->
+
+    <ImageView
+        android:onClick="profile_iv_avatar"
+        android:clickable="true"
+        android:id="@+id/profile_iv_avatar"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/app_logo"
+        android:background="@drawable/rounded_shape"
+        android:clipToOutline="true"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+<!--    Fullname-->
+
+    <TextView
+        android:id="@+id/profile_tv_fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full name"
+        android:textColor="@color/black"
+        android:textSize="8pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintTop_toBottomOf="@id/profile_iv_avatar"
+        android:paddingVertical="10dp"/>
+
+    <EditText
+        android:id="@+id/profile_et_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/custom_edittext1"
+        app:layout_constraintTop_toBottomOf="@id/profile_tv_fullname"
+        android:layout_marginHorizontal="15dp"
+        android:inputType="textPersonName"/>
+
+    <!--E-mail-->
+
+    <TextView
+        android:id="@+id/profile_tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-mail"
+        android:textColor="@color/black"
+        android:textSize="8pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintTop_toBottomOf="@id/profile_et_fullname"
+        android:paddingVertical="10dp"/>
+
+    <EditText
+        android:id="@+id/profile_et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:padding="10dp"
+        android:background="@drawable/custom_edittext1"
+        app:layout_constraintTop_toBottomOf="@id/profile_tv_email"
+        android:layout_marginHorizontal="15dp"
+        android:inputType="textWebEmailAddress"/>
+
+    <!--password-->
+
+    <TextView
+        android:id="@+id/profile_tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textSize="8pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintTop_toBottomOf="@id/profile_et_email"
+        android:paddingVertical="10dp"/>
+
+    <EditText
+        android:id="@+id/profile_et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/custom_edittext1"
+        app:layout_constraintTop_toBottomOf="@id/profile_tv_password"
+        android:layout_marginHorizontal="15dp"
+        android:inputType="textVisiblePassword"/>
+
+<!--    change data-->
+
+    <Button
+        android:onClick="profile_btn_changedata"
+        android:id="@+id/profile_btn_changedata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Change data"
+        android:backgroundTint="@color/orange"
+        app:layout_constraintTop_toBottomOf="@+id/profile_et_password"/>
+
+    <Button
+        android:onClick="profile_btn_refresh"
+        android:id="@+id/profile_btn_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:text="refresh"
+        android:backgroundTint="@color/orange"
+        app:layout_constraintTop_toBottomOf="@+id/profile_btn_changedata"/>
+
+    <Button
+        android:onClick="profile_btn_exit"
+        android:id="@+id/profile_btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:text="exit"
+        android:backgroundTint="@color/orange"
+        app:layout_constraintTop_toBottomOf="@+id/profile_btn_refresh"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:elevation="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:name="com.example.foodapp.BottomMenuFragment"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

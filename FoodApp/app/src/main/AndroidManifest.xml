@@ -2,33 +2,63 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/app_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/app_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodApp"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".resetpass"
+            android:name=".Activities.changepassword"
             android:exported="false" />
         <activity
-            android:name=".verifcode"
+            android:name=".Activities.verifresetpass"
             android:exported="false" />
         <activity
-            android:name=".login"
+            android:name=".Activities.cartPage"
             android:exported="false" />
         <activity
-            android:name=".signup"
+            android:name=".Activities.productPage"
             android:exported="false" />
         <activity
-            android:name=".welcome2"
+            android:name=".Activities.favorites"
             android:exported="false" />
         <activity
-            android:name=".welcome1"
+            android:name=".Activities.profilePage"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.search"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.general"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.seccode"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.resetpass"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.verifcode"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.login"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.signup"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.welcome2"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.welcome1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

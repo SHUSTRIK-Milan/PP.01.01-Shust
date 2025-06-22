@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".resetpass">
+    tools:context=".Activities.resetpass">
 
     <ImageView
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageButton
-        android:id="@+id/login_btn_back"
+        android:id="@+id/resetpass_btn_back"
         android:onClick="btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,8 +38,8 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="18pt"
-        app:layout_constraintStart_toStartOf="@id/login_btn_back"
-        app:layout_constraintTop_toTopOf="@id/login_btn_back"
+        app:layout_constraintStart_toStartOf="@id/resetpass_btn_back"
+        app:layout_constraintTop_toTopOf="@id/resetpass_btn_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.1"/>
 
@@ -61,10 +61,11 @@
         android:background="@drawable/custom_edittext1"
         android:layout_marginHorizontal="15dp"
         app:layout_constraintTop_toBottomOf="@id/resetpass_tv_2"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        android:inputType="textWebEmailAddress"/>
 
     <Button
-        android:id="@+id/resetpass_btn_sendpass"
+        android:id="@+id/resetpass_btn_resetpass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/orange"

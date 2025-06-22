@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.productPage">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/main_background"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/product_btn_back"
+        android:onClick="btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.04"
+        app:layout_constraintHorizontal_bias="0.04"
+        android:elevation="20dp"/>
+    
+    <ImageView
+        android:id="@+id/product_iv_img"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/rounded_shape"
+        android:clipToOutline="true"
+        android:src="@drawable/test_pizza"
+        android:elevation="10dp"/>
+
+    <TextView
+        android:id="@+id/product_tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/product_iv_img"
+        app:layout_constraintStart_toStartOf="@id/product_iv_img"
+        app:layout_constraintHorizontal_bias="0"
+        android:text="Title"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="23sp"
+        android:elevation="8dp"/>
+
+    <TextView
+        android:id="@+id/product_tv_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/product_iv_img"
+        app:layout_constraintEnd_toEndOf="@id/product_iv_img"
+        app:layout_constraintHorizontal_bias="0"
+        android:text="$ Price"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="23sp"
+        android:elevation="8dp"/>
+
+    <TextView
+        android:id="@+id/product_tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/product_tv_title"
+        app:layout_constraintStart_toStartOf="@id/product_tv_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:text="Desc"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:elevation="8dp"/>
+
+    <Button
+        android:id="@+id/product_btn_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/orange"
+        android:text="Add to cart"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

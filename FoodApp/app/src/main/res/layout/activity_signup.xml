@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signup">
+    tools:context=".Activities.signup">
 
     <ImageView
         android:layout_width="match_parent"
@@ -67,7 +67,8 @@
         android:background="@drawable/custom_edittext1"
         app:layout_constraintTop_toBottomOf="@id/signup_tv_fullname"
         app:layout_constraintBottom_toTopOf="@+id/signup_tv_email"
-        android:layout_marginHorizontal="15dp"/>
+        android:layout_marginHorizontal="15dp"
+        android:inputType="textPersonName"/>
 
     <!--E-mail-->
 
@@ -93,7 +94,8 @@
         android:background="@drawable/custom_edittext1"
         app:layout_constraintTop_toBottomOf="@id/signup_tv_email"
         app:layout_constraintBottom_toTopOf="@+id/signup_tv_password"
-        android:layout_marginHorizontal="15dp"/>
+        android:layout_marginHorizontal="15dp"
+        android:inputType="textWebEmailAddress"/>
 
     <!--E-mail-->
 
@@ -106,19 +108,36 @@
         android:textSize="8pt"
         app:layout_constraintStart_toStartOf="@id/signup_btn_back"
         app:layout_constraintTop_toBottomOf="@id/signup_et_email"
-        app:layout_constraintBottom_toTopOf="@id/signup_et_password"
+        app:layout_constraintBottom_toTopOf="@id/signup_ll_password"
         android:paddingVertical="10dp"/>
 
-    <EditText
-        android:id="@+id/signup_et_password"
+    <LinearLayout
+        android:id="@+id/signup_ll_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        android:hint="••••••••••"
-        android:padding="10dp"
-        android:background="@drawable/custom_edittext1"
         app:layout_constraintTop_toBottomOf="@id/signup_tv_password"
-        android:layout_marginHorizontal="15dp"/>
+        android:layout_marginHorizontal="15dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/signup_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="Password"
+            android:background="@drawable/custom_edittext1"
+            android:padding="10dp"
+            android:inputType="textPassword"
+            android:layout_weight="0.2"/>
+        <ImageButton
+            android:id="@+id/signup_ibtn_password_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_eye_close"
+            android:background="@drawable/custom_button1"
+            app:tint="@color/orange"
+            android:tag="close"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
 <!--    Bottom buttons-->
 
@@ -131,7 +150,7 @@
         android:backgroundTint="@color/orange"
         android:text="Sign Up"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/signup_et_password"
+        app:layout_constraintTop_toBottomOf="@id/signup_ll_password"
         app:layout_constraintVertical_bias="0.502"
         tools:layout_editor_absoluteX="49dp" />
 
