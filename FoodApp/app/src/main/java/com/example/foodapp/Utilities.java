@@ -279,7 +279,7 @@ public class Utilities {
                     DataBinding.setCategoriesList(categoryList);
 
                     try{
-                        Toast.makeText(activity.getApplicationContext(), "Категории обновлены", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(activity.getApplicationContext(), "Категории обновлены", Toast.LENGTH_SHORT).show();
                         callback.onResult(true);
                     }catch (Exception ignored){}
                 });
@@ -305,7 +305,7 @@ public class Utilities {
                     DataBinding.setProductsList(gson.fromJson(responseBody, type));
 
                     try{
-                        Toast.makeText(activity.getApplicationContext(), "Продукты обновлены", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(activity.getApplicationContext(), "Продукты обновлены", Toast.LENGTH_SHORT).show();
                         callback.onResult(true);
                     }catch (Exception ignored){}
                 });
